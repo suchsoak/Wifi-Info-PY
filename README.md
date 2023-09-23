@@ -29,7 +29,7 @@
 ```
 
 ```sh
-  pip install -r requirements.txt
+  pip install -r requirementes.txt
 ```
 
 # How to use
