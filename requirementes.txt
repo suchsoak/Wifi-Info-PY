@@ -1,0 +1,4 @@
+speedtest_cli
+psutil
+colorama
+packaging==20.9
