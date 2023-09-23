@@ -44,7 +44,7 @@ The expression results.upload/1024/1024 is used to convert the upload speed from
 
 ```sh
     print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
-    print("Download:", speed.upload / 1024 / 1024, "Mbps")
+    print("Download:", speed.download / 1024 / 1024, "Mbps")
     print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
     print("Upload:", speed.upload / 1024 / 1024, "Mbps")
     print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
