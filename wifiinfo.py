@@ -99,7 +99,7 @@ try:
     s.download()
     s.upload()
 
-    resultados = s.results
+    speed = s.results
 
     print("")
 
@@ -115,13 +115,13 @@ try:
     print(Speedtest)
     print(Style.RESET_ALL) 
     print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
-    print("Download:", resultados.download / 1024 / 1024, "Mbps")
+    print("Download:", speed.download / 1024 / 1024, "Mbps")
     print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
-    print("Upload:", resultados.upload / 1024 / 1024, "Mbps")
+    print("Upload:", speed.upload / 1024 / 1024, "Mbps")
     print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
-    print("Ping:", resultados.ping, "ms")
+    print("Ping:", speed.ping, "ms")
     print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
-    print("Server:", resultados.server['sponsor'])
+    print("Server:", speed.server['sponsor'])
 
 except Exception as error:
      print(error)
