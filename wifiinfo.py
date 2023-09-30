@@ -100,7 +100,7 @@ print()
 
 time.sleep(2.0)
 
-# Firewall 
+# Firewall Test
 
 colorama.init()
 print(Fore.MAGENTA)
@@ -127,13 +127,13 @@ try:
 
     elif r.status_code == 403:
         print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
-        print("Tor is not fiend", "Status Code: " ,r.status_code)
-        print("Proxy is not fiend!", "Status Code: " ,proxy)
+        print("Tor is not found", "Status Code: " ,r.status_code)
+        print("Proxy is not found!", "Status Code: " ,proxy)
 
     elif r.status_code == 503:
         print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
-        print("Tor is not fiend")
-        print("Proxy is not fiend!", "Status Code: " ,proxy)
+        print("Tor is not found")
+        print("Proxy is not found!", "Status Code: " ,proxy)
         
     else:
         print("Tor rejected, bocked for firewall: ", r.status_code)
@@ -142,7 +142,7 @@ try:
 except Exception as e:
     print(e)
 
-# Speed Teste
+# Speed Test
 
 try:
     s = speedtest.Speedtest()
