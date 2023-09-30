@@ -132,7 +132,7 @@ try:
 
     elif r.status_code == 503:
         print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
-        print("Tor is not found")
+        print("Tor is not found", r.status_code)
         print("Proxy is not found!", "Status Code: " ,proxy)
         
     else:
