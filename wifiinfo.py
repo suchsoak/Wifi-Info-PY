@@ -3,16 +3,18 @@
 
 #  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
 #  Everyone is permitted to copy and distribute verbatim copies
-#  of this license document, but changing it is not allowed
+#  of this license document, but changing it is not allowed.
 
 import ifcfg
 import time
 import platform
 import os
 import psutil
+import requests 
 import speedtest_cli as speedtest
 import colorama
 from colorama import Fore, Style
+
 
 if platform.system() == 'Linux':
     os.system("clear")
@@ -97,6 +99,48 @@ for interface, addresses in add.items():
 print()
 
 time.sleep(2.0)
+
+# Firewall 
+
+colorama.init()
+print(Fore.MAGENTA)
+firewall = '''
+.−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−.
+| ⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗Firewall Test⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗ |
+'−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−'
+'''
+print(firewall)
+print(Style.RESET_ALL)
+
+try:
+
+    r = requests.get('https://www.torproject.org/')
+    proxy = requests.get('https://www.proxysite.com/')
+
+    r.status_code
+
+    if r.status_code == 200:
+        print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
+        print("Tor is not blocked!", "Status Code: " ,r.status_code)
+        print("Proxy is not blocked!", "Status Code: " ,proxy)
+
+
+    elif r.status_code == 403:
+        print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
+        print("Tor is not fiend", "Status Code: " ,r.status_code)
+        print("Proxy is not fiend!", "Status Code: " ,proxy)
+
+    elif r.status_code == 503:
+        print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
+        print("Tor is not fiend")
+        print("Proxy is not fiend!", "Status Code: " ,proxy)
+        
+    else:
+        print("Tor rejected, bocked for firewall: ", r.status_code)
+        print("Proxy blocked for firewall", "Status Code: " ,proxy)
+
+except Exception as e:
+    print(e)
 
 # Speed Teste
 
