@@ -123,22 +123,27 @@ try:
         print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
         print("Tor is not blocked!", "Status Code: " ,r.status_code)
         print("Proxy is not blocked!", "Status Code: " ,proxy)
+        print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
 
 
     elif r.status_code == 403:
         print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
         print("Tor is not found", "Status Code: " ,r.status_code)
         print("Proxy is not found!", "Status Code: " ,proxy)
-
+        print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
+        
     elif r.status_code == 503:
         print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
         print("Tor is not found", r.status_code)
         print("Proxy is not found!", "Status Code: " ,proxy)
+        print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
         
     else:
+        print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
         print("Tor rejected, bocked for firewall: ", r.status_code)
         print("Proxy blocked for firewall", "Status Code: " ,proxy)
-
+        print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
+        
 except Exception as e:
     print(e)
 
