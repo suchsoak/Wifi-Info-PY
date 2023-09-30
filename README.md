@@ -38,6 +38,22 @@
   python3 wifiinfo.py
 ```
 
+# How Firewall Test works
+
+It will try to make the connection with the tor project, if this rejects the problem it may be because of the firewall. In case it may just be the error connection.
+
+```sh
+   r = requests.get('https://www.torproject.org/')
+```
+If you want, you can change the sites for make the requests.
+
+
+```sh
+   r = requests.get('https://www.torproject.org/')
+   proxy = requests.get('https://www.proxysite.com/')
+```
+
+
 # How speedtest works
 
 The expression results.upload/1024/1024 is used to convert the upload speed from bytes to megabits per second (Mbps). The value 1024 is used to convert bytes to kilobytes, and the value 1024 is used again to convert kilobytes to megabytes. If you want to change the number used in the conversion, you can change the 1024 values to other numbers. For example, if you want to convert bytes to gigabits per second (Gbps), you can use 1024*1024*1024 as the divisor. Or if you want to use a different unit, such as kilobits per second (Kbps), you can use a smaller splitter, such as 1024/8. Here is the example updated with a divisor of 1000 to convert to kilobits per second (Kbps): print("Upload:", results.upload / 1000, "Kbps") Keep in mind that when you change the splitter, you'll also need to adjust the unit of measurement in print.
