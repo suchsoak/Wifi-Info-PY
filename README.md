@@ -53,7 +53,13 @@ If you want, you can change the sites for make the requests.
    r = requests.get('https://www.torproject.org/')
    proxy = requests.get('https://www.proxysite.com/')
 ```
+## Status Code
 
+The HTTP 200 OK is the status response code from a server for successful HTTP requests from a client (browser). For a web page, it indicates that its HTML code can be loaded successfully. 
+
+HTTP 403 is an HTTP status code meaning access to the requested resource is forbidden. The server understood the request, but will not fulfill it, if it was correct
+
+The 503 Service Unavailable error is an HTTP status code that means a website's server is not available right now. Most of the time, it occurs because the server is too busy or maintenance is being performed on it. 
 
 # How speedtest works
 
