@@ -33,7 +33,7 @@
   pip install -r requirements.txt
 ```
 
-# How to use
+# Usage
 
 ```sh
   python3 wifiinfo.py
