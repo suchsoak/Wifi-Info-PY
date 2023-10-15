@@ -39,6 +39,30 @@
   python3 wifiinfo.py
 ```
 
+# How nt.device.wifi works
+
+it will show networks that have already been connected
+
+```sh
+    wifi_mode = device.mode
+    wifi_bssid = device.bssid
+    wifi_ssid = device.ssid
+    time.sleep(3)
+    wifi_signal = device.signal
+    wifi_cha = device.chan
+    wifi_frequency = device.freq
+    wifi_security = device.security
+    
+    print(f"WiFi Mode: {wifi_mode}")
+    print(f"BSSID: {wifi_bssid}")
+    print(f"SSID: {wifi_ssid}")
+    print(f"Signal Strength: {wifi_signal}")
+    print(f"WiFi Chang: {wifi_cha}")
+    print(f"wifi Frequency: {wifi_frequency}")
+    print(f"wifi Security: {wifi_security}")
+    print()
+```
+
 # How Firewall Test works
 
 It will try to make the connection with the tor project, if this rejects the problem it may be because of the firewall. In case it may just be the error connection.
@@ -85,6 +109,7 @@ print("Upload:", speed.upload / 1000, "Kbps")
 | Psutil | https://pypi.org/project/psutil/
 | Speedtest |  https://github.com/sivel/speedtest-cli/wiki
 | Ifcfg |  https://pypi.org/project/ifcfg/
+| nmcli |  https://github.com/ushiboy/nmcli
 | Colorama |  https://pypi.org/project/colorama/
 | Platform |  https://docs.python.org/3/library/platform.html
 
