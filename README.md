@@ -43,6 +43,8 @@
 
 it will show networks that have already been connected
 
+> For nmcli to work you need to have in your network-manager system
+
 ```sh
     wifi_mode = device.mode
     wifi_bssid = device.bssid
