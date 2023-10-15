@@ -2,4 +2,4 @@ speedtest_cli
 psutil
 colorama
 ifcfg
-packaging==20.9
+nmcli
