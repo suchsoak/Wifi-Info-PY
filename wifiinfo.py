@@ -10,6 +10,7 @@ import time
 import platform
 import os
 import psutil
+import nmcli as nt
 import requests 
 import speedtest_cli as speedtest
 import colorama
@@ -95,20 +96,52 @@ for interface, addresses in add.items():
         print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
         print("Family:", address.family)
         print("Address:", address.address)
+        time.sleep(2)
         print("Netmask:", address.netmask)
         print("Broadcast:", address.broadcast)
 print()
 
 time.sleep(2.0)
 
-# Firewall Test
+colorama.init()
+print(Fore.MAGENTA)
+
+nt1 = '''
+.−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−.
+| ⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗Other Wifi Information⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗ |
+'−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−'
+'''
+print(nt1)
+print(Style.RESET_ALL)
+
+wifi_info = nt.device.wifi()
+
+for device in wifi_info:
+    wifi_mode = device.mode
+    wifi_bssid = device.bssid
+    wifi_ssid = device.ssid
+    time.sleep(3)
+    wifi_signal = device.signal
+    wifi_cha = device.chan
+    wifi_frequency = device.freq
+    wifi_security = device.security
+    
+    print(f"WiFi Mode: {wifi_mode}")
+    print(f"BSSID: {wifi_bssid}")
+    print(f"SSID: {wifi_ssid}")
+    print(f"Signal Strength: {wifi_signal}")
+    print(f"WiFi Chang: {wifi_cha}")
+    print(f"wifi Frequency: {wifi_frequency}")
+    print(f"wifi Security: {wifi_security}")
+    print()
+print("\t")
 
 colorama.init()
 print(Fore.MAGENTA)
 firewall = '''
-.−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−.
+.−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−.
 | ⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗Firewall Test⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗ |
-'−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−'
+'−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−'
 '''
 print(firewall)
 print(Style.RESET_ALL)
@@ -118,6 +151,7 @@ try:
     r = requests.get('https://www.torproject.org/')
     proxy = requests.get('https://www.proxysite.com/')
 
+
     r.status_code
 
     if r.status_code == 200:
@@ -126,13 +160,12 @@ try:
         print("Proxy is not blocked!", "Status Code: " ,proxy)
         print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
 
-
     elif r.status_code == 403:
         print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
         print("Tor is not found", "Status Code: " ,r.status_code)
         print("Proxy is not found!", "Status Code: " ,proxy)
         print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
-        
+
     elif r.status_code == 503:
         print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
         print("Tor is not found", r.status_code)
@@ -144,11 +177,11 @@ try:
         print("Tor rejected, bocked for firewall: ", r.status_code)
         print("Proxy blocked for firewall", "Status Code: " ,proxy)
         print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
-        
+
 except Exception as e:
     print(e)
 
-# Speed Test
+# Speed Teste
 
 try:
     s = speedtest.Speedtest()
