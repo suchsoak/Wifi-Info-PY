@@ -1,5 +1,4 @@
-
-name: Update_Python
+name: Update
 
 on:
   push:
@@ -20,10 +19,15 @@ jobs:
         python-version: 3.9
 
     - name: Install dependencies
-      run: pip install -r requirements.txt
+      run: |
+        pip install -r requirements.txt
+        pip install pytest
 
-    - name: Run tests
-      run: wifiinfo.py
+    - name: List directory contents
+      run: ls -la
+
+    - name: Run wifiinfo.py
+      run: python wifiinfo.py
 
     - name: Generate code coverage report
       run: coverage run --source=. -m pytest && coverage report
@@ -33,5 +37,5 @@ jobs:
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
         git add .
-        git commit -m "Atualizar repositório"
+        git commit -m "Update"
         git push
