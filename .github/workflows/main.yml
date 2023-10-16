@@ -21,13 +21,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-
-    - name: List directory contents
-      run: ls -la
-
-    - name: Run wifiinfo.py
-      run: python3 wifiinfo.py
-
+        
     - name: Generate code coverage report
       run: coverage run --source=. -m pytest && coverage report
 
