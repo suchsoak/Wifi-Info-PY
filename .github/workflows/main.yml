@@ -24,7 +24,7 @@ jobs:
     - name: Generate code coverage report
       run: coverage run --source=. -m pytest && coverage report
 
-  - name: Checkout repository
-    uses: actions/checkout@v2
-    with:
-      repository: suchsoak/Wifi-Info-PY
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        repository: suchsoak/Wifi-Info-PY
