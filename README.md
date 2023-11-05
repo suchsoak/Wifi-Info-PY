@@ -53,7 +53,9 @@ for device in wifi_info:
     try:
         wifi_mode = device.mode
         wifi_bssid = device.bssid
+        print()
         wifi_ssid = device.ssid
+        print()
         time.sleep(3)
         wifi_signal = device.signal
         wifi_cha = device.chan
@@ -62,7 +64,10 @@ for device in wifi_info:
         
         print(f"WiFi Mode: {wifi_mode}")
         print(f"BSSID: {wifi_bssid}")
+        colorama.init()
+        print(Fore.MAGENTA)
         print(f"SSID: {wifi_ssid}")
+        print(Style.RESET_ALL)
         print(f"Signal Strength: {wifi_signal}")
         print(f"WiFi Chang: {wifi_cha}")
         print(f"wifi Frequency: {wifi_frequency}")
@@ -84,6 +89,7 @@ If you want, you can change the sites for make the requests.
 ```sh
    r = requests.get('https://www.torproject.org/')
    proxy = requests.get('https://www.proxysite.com/')
+   vpnproton = requests.get('https://protonvpn.com/')
 ```
 ## Status Code
 
