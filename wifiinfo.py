@@ -1,27 +1,11 @@
-#  GNU GENERAL PUBLIC LICENSE
-#  Version 3, 29 June 2007
-
-#  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
-#  Everyone is permitted to copy and distribute verbatim copies
-#  of this license document, but changing it is not allowed.
-
 import ifcfg
 import time
-import platform
-import os
 import psutil
 import nmcli as nt
 import requests 
 import speedtest_cli as speedtest
 import colorama
 from colorama import Fore, Style
-
-
-if platform.system() == 'Linux':
-    os.system("clear")
-    
-elif platform.system() =='Windows':
-    os.system("cls")
 
 colorama.init()
 print(Fore.MAGENTA)
@@ -80,6 +64,9 @@ time.sleep(3.0)
 print("\t")
 colorama.init()
 print(Fore.MAGENTA)
+
+# Family Information
+
 family = '''
 .−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−.
 | ⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗Family Information⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗ |
@@ -136,11 +123,14 @@ for device in wifi_info:
         print(f"wifi Security: {wifi_security}")
         print()
     except Exception as error:
-        print(f"Error {error}"
+        print(f"Error: {error}")
 print("\t")
 
 colorama.init()
 print(Fore.MAGENTA)
+
+# Firewall Test
+
 firewall = '''
 .−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−.
 | ⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗Firewall Test⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗ |
