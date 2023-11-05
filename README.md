@@ -21,7 +21,6 @@
 
 > Don't forget to install the requirements.txt
 
-
 ```sh
   git clone https://github.com/suchsoak/Wifi-Info-PY
 ```
@@ -48,23 +47,29 @@
 > For nmcli to work you need to have in your network-manager system
 
 ```sh
-    wifi_mode = device.mode
-    wifi_bssid = device.bssid
-    wifi_ssid = device.ssid
-    time.sleep(3)
-    wifi_signal = device.signal
-    wifi_cha = device.chan
-    wifi_frequency = device.freq
-    wifi_security = device.security
-    
-    print(f"WiFi Mode: {wifi_mode}")
-    print(f"BSSID: {wifi_bssid}")
-    print(f"SSID: {wifi_ssid}")
-    print(f"Signal Strength: {wifi_signal}")
-    print(f"WiFi Chang: {wifi_cha}")
-    print(f"wifi Frequency: {wifi_frequency}")
-    print(f"wifi Security: {wifi_security}")
-    print()
+wifi_info = nt.device.wifi()
+
+for device in wifi_info:
+    try:
+        wifi_mode = device.mode
+        wifi_bssid = device.bssid
+        wifi_ssid = device.ssid
+        time.sleep(3)
+        wifi_signal = device.signal
+        wifi_cha = device.chan
+        wifi_frequency = device.freq
+        wifi_security = device.security
+        
+        print(f"WiFi Mode: {wifi_mode}")
+        print(f"BSSID: {wifi_bssid}")
+        print(f"SSID: {wifi_ssid}")
+        print(f"Signal Strength: {wifi_signal}")
+        print(f"WiFi Chang: {wifi_cha}")
+        print(f"wifi Frequency: {wifi_frequency}")
+        print(f"wifi Security: {wifi_security}")
+        print()
+    except Exception as error:
+        print(f"Error: {error}")
 ```
 
 # How Firewall Test works
