@@ -1,5 +1,6 @@
 # Wifi-Info-PY
- The script that gives information about WIFI
+
+**The script that gives information about WIFI**
 
 ```sh
                __       __ ______ ________ ______      ______ __    __ ________  ______  
@@ -41,8 +42,9 @@
 
 # How nt.device.wifi works
 
-it will show networks that have already been connected
+**it will show networks that have already been connected**
 
+>[!NOTE]
 > For nmcli to work you need to have in your network-manager system
 
 ```sh
@@ -74,22 +76,21 @@ It will try to make the connection with the tor project, if this rejects the pro
 ```
 If you want, you can change the sites for make the requests.
 
-
 ```sh
    r = requests.get('https://www.torproject.org/')
    proxy = requests.get('https://www.proxysite.com/')
 ```
 ## Status Code
 
-The HTTP 200 OK is the status response code from a server for successful HTTP requests from a client (browser). For a web page, it indicates that its HTML code can be loaded successfully. 
+The **HTTP 200** OK is the status response code from a server for successful **HTTP** requests from a client (browser). For a web page, it indicates that its HTML code can be loaded successfully. 
 
-HTTP 403 is an HTTP status code meaning access to the requested resource is forbidden. The server understood the request, but will not fulfill it, if it was correct
+**HTTP 403** is an **HTTP** status code meaning access to the requested resource is forbidden. The server understood the request, but will not fulfill it, if it was correct
 
-The 503 Service Unavailable error is an HTTP status code that means a website's server is not available right now. Most of the time, it occurs because the server is too busy or maintenance is being performed on it. 
+The **503** Service Unavailable error is an **HTTP** status code that means a website's server is not available right now. Most of the time, it occurs because the server is too busy or maintenance is being performed on it. 
 
 # How speedtest works
 
-The expression results.upload/1024/1024 is used to convert the upload speed from bytes to megabits per second (Mbps). The value 1024 is used to convert bytes to kilobytes, and the value 1024 is used again to convert kilobytes to megabytes. If you want to change the number used in the conversion, you can change the 1024 values to other numbers. For example, if you want to convert bytes to gigabits per second (Gbps), you can use 1024*1024*1024 as the divisor. Or if you want to use a different unit, such as kilobits per second (Kbps), you can use a smaller splitter, such as 1024/8. Here is the example updated with a divisor of 1000 to convert to kilobits per second (Kbps): print("Upload:", results.upload / 1000, "Kbps") Keep in mind that when you change the splitter, you'll also need to adjust the unit of measurement in print.
+The expression **results.upload/1024/1024** is used to convert the upload speed from bytes to megabits per second (Mbps). The value **1024** is used to convert bytes to kilobytes, and the value **1024** is used again to convert kilobytes to megabytes. If you want to change the number used in the conversion, you can change the **1024** values to other numbers. For example, if you want to convert bytes to gigabits per second **(Gbps)**, you can use **1024*1024*1024** as the divisor. Or if you want to use a different unit, such as kilobits per second **(Kbps)**, you can use a smaller splitter, such as 1024/8. Here is the example updated with a divisor of 1000 to convert to kilobits per second **(Kbps): print("Upload:"**, **results.upload / 1000, "Kbps")** Keep in mind that when you change the splitter, you'll also need to adjust the unit of measurement in print.
 
 ```sh
     print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
@@ -98,11 +99,14 @@ The expression results.upload/1024/1024 is used to convert the upload speed from
     print("Upload:", speed.upload / 1024 / 1024, "Mbps")
     print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
 ```
-If you want, you can change
+**If you want, you can change**
 
 ```sh
 print("Upload:", speed.upload / 1000, "Kbps")
 ```
+# License & Copyright
+
+**GPL-3.0 license**
 
 ## Libraries:
 
