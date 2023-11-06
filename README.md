@@ -2,6 +2,8 @@
 
 **The script that gives information about WIFI**
 
+[![Update](https://github.com/suchsoak/Wifi-Info-PY/actions/workflows/main.yml/badge.svg)](https://github.com/suchsoak/Wifi-Info-PY/actions/workflows/main.yml)
+
 ```sh
                __       __ ______ ________ ______      ______ __    __ ________  ______  
            |  \  _  |  \      \        \      \    |      \  \  |  \        \/      \ 
