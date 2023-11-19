@@ -133,8 +133,3 @@ print("Upload:", speed.upload / 1000, "Kbps")
 | nmcli |  https://github.com/ushiboy/nmcli
 | Colorama |  https://pypi.org/project/colorama/
 | Platform |  https://docs.python.org/3/library/platform.html
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/m100047r)
-
-
-
