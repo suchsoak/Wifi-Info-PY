@@ -47,7 +47,7 @@
 
 **it will show networks that have already been connected**
 
->[!NOTE]
+>[!IMPORTANT]
 > For nmcli to work you need to have in your network-manager system
 
 ```sh
