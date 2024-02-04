@@ -3,7 +3,6 @@
 **The script that gives information about WIFI**
 
 [![Update](https://github.com/suchsoak/Wifi-Info-PY/actions/workflows/update.yml/badge.svg)](https://github.com/suchsoak/Wifi-Info-PY/actions/workflows/update.yml)
-![downloads](https://img.shields.io/github/downloads/suchsoak/Wifi-Info-PY/total.svg)
 
 ```sh
                __       __ ______ ________ ______      ______ __    __ ________  ______  
