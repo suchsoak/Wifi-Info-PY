@@ -22,6 +22,7 @@
 
 # How to install
 
+>[!NOTE]
 > Don't forget to install the requirements.txt
 
 ```sh
