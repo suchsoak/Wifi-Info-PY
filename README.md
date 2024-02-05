@@ -17,7 +17,7 @@
            
                    ⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗Github: https://github.com/suchsoak⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗
                                             BY:suchsoak
-                                              v:1.0.2
+                                              v:1.0.3
 ```
 
 # How to install
