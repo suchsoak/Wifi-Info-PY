@@ -1,3 +1,4 @@
+requests
 speedtest_cli
 psutil
 colorama
