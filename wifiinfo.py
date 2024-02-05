@@ -67,8 +67,6 @@ for interface in interfaces.values():
                 print ("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
                 print ("Broadcasts:             ",interface['broadcasts'])
                 print ("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
-                print ("flags:              ",interface['flags'])
-                print ("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
                 print ("prefixlens:              ",interface['prefixlens'])
                 print ("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
                 
