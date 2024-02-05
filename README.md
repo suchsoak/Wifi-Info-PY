@@ -90,9 +90,14 @@ It will try to make the connection with the tor project, if this rejects the pro
 If you want, you can change the sites for make the requests.
 
 ```sh
-   r = requests.get('https://www.torproject.org/')
-   proxy = requests.get('https://www.proxysite.com/')
-   vpnproton = requests.get('https://protonvpn.com/')
+    proxy = requests.get('https://www.proxysite.com/')
+    vpnproton = requests.get('https://protonvpn.com/')
+    proxylist = requests.get('https://free-proxy-list.net/')
+    proxylist2 = requests.get('https://www.proxyscrape.com/free-proxy-list')
+    OnWorks = requests.get('https://www.onworks.net/')
+    nordvpn = requests.get('https://nordvpn.com/')
+    shodan = requests.get('https://www.shodan.io/')
+    zoomeye = requests.get('https://www.zoomeye.org/')
 ```
 ## Status Code
 
@@ -112,6 +117,11 @@ The expression **results.upload/1024/1024** is used to convert the upload speed 
     print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
     print("Upload:", speed.upload / 1024 / 1024, "Mbps")
     print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
+    print("Ping:", speed.ping, "ms")
+    print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
+    print("Bytes:", speed.bytes_received, "bytes")
+    print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
+    print("Server:", speed.server['sponsor'])
 ```
 **If you want, you can change**
 
