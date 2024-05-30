@@ -31,7 +31,7 @@ pattern = '''
 
         ⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗Github: https://github.com/suchsoak⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗
                                    BY: suchsoak
-                                    v:1.0.3
+                                    v:1.0.4
 '''
 
 print(pattern)
@@ -116,72 +116,59 @@ for conn in net_connections:
 
 time.sleep(1.0)
 
-colorama.init()
-print(Fore.MAGENTA)
+search = os.system("nmcli")
 
-nt1 = '''
+if search == False:
 
-    |ooo===ooo===oooo==oooo===ooo===ooo===ooo|
-    |===ooo===ooo========+==oo===ooo===ooo===|
-    |====o====oo=+:... .     ..:+=oo===ooo===|
-    |ooo===oo=:.      .......     .:=o====ooo|
-    |====oo=:    .:::::::::::+::.    :+ooo===|
-    |===oo:   .:+::.          ..:+:.   :=o===|
-    |ooo==.  :+:    ..::++:::.    :+:  .==ooo|
-    |===oo=+=+.   :+=+::::::+++:    +=+=oo===|
-    |===ooo==.  :+:.          .:+.  :==ooo===|
-    |ooo===ooo++:    .:+++::.    :++=oo===ooo|
-    |===o====oo=.  :+oo+:::=o=:  .=o===o=o===|
-    |===ooo===oo=++=o=.     +oo++=oo===ooo===|
-    |ooo===ooo====ooo:      :=ooo===ooo===ooo|
-    |o=o====oo==o=oo=o:.  ..==========o=====o|
-    |===ooo===ooo====oo=++=ooo===ooo===ooo===|
+    nmcli = os.system("nmcli")
 
-.−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−.
-| ⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗Other Wifi Information⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗ |
-'−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−'
-'''
-print(nt1)
-print(Style.RESET_ALL)
-
-wifi_info = nt.device.wifi()
-
-for device in wifi_info:
-
-    try:
+    if nmcli == True:
         
-        wifi_mode = device.mode
-        wifi_bssid = device.bssid
-        print()
-        wifi_ssid = device.ssid
-        print()
-        time.sleep(2)
-        wifi_signal = device.signal
-        wifi_cha = device.chan
-        wifi_frequency = device.freq
-        wifi_security = device.security
-        wifi_general = device.general
+        print("[*] You need install network-manager system.")
         
-        print(f"WiFi Mode: {wifi_mode}")
-        print(f"BSSID: {wifi_bssid}")
-        colorama.init()
-        print(Fore.MAGENTA)
-        print(f"SSID: {wifi_ssid}")
-        print(Style.RESET_ALL)
-        print(f"Signal Strength: {wifi_signal}")
-        print(f"WiFi Chang: {wifi_cha}")
-        print(f"wifi Frequency: {wifi_frequency}")
-        print(f"wifi Security: {wifi_security}")
-        print(f"wifi general: {wifi_general}")
-        print()
+    else:
+        print("")
 
-    except Exception as error:
-        print(f"Error: {error}")
-        
-print("\t")
+    wifi_info = nt.device.wifi()
 
-colorama.init()
-print(Fore.MAGENTA)
+    for device in wifi_info:
+
+        try:
+            
+            wifi_mode = device.mode
+            wifi_bssid = device.bssid
+            print()
+            wifi_ssid = device.ssid
+            print()
+            time.sleep(2)
+            wifi_signal = device.signal
+            wifi_cha = device.chan
+            wifi_frequency = device.freq
+            wifi_security = device.security
+            wifi_general = device.general
+            
+            print(f"WiFi Mode: {wifi_mode}")
+            print(f"BSSID: {wifi_bssid}")
+            colorama.init()
+            print(Fore.MAGENTA)
+            print(f"SSID: {wifi_ssid}")
+            print(Style.RESET_ALL)
+            print(f"Signal Strength: {wifi_signal}")
+            print(f"WiFi Chang: {wifi_cha}")
+            print(f"wifi Frequency: {wifi_frequency}")
+            print(f"wifi Security: {wifi_security}")
+            print(f"wifi general: {wifi_general}")
+            print()
+
+        except Exception as error:
+            print(f"Error: {error}")
+            
+    print("\t")
+
+    colorama.init()
+    print(Fore.MAGENTA)
+else:
+    pass
 
 # Firewall Test
 
@@ -233,6 +220,32 @@ try:
         print(Style.RESET_ALL) 
 
     elif r.status_code == 403:
+        colorama.init()
+        print(Fore.RED)
+        print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
+        print()
+        print("Tor is not found", "Status Code: " ,r.status_code)
+        print()
+        print("Proxy is not found!", "Status Code: " ,proxy.status_code)
+        print()
+        print("vpnproton is not found!", "Status Code: " ,vpnproton.status_code)
+        print()
+        print("free-proxy-list is not blocked!", "Status Code: " ,proxylist.status_code)
+        print()
+        print("Proxy_list2 is not blocked!", "Status Code: " ,proxylist2.status_code)
+        print()
+        print("OnWork is not blocked!", "Status Code: " ,OnWorks.status_code)
+        print()
+        print("NordVpn is not blocked!", "Status Code: " ,nordvpn.status_code)
+        print()
+        print("shodan is not blocked!", "Status Code: " ,shodan.status_code)
+        print()
+        print("zoomeye is not blocked!", "Status Code: " ,zoomeye.status_code)
+        print()
+        print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
+        print(Style.RESET_ALL) 
+
+    elif r.status_code == 404:
         colorama.init()
         print(Fore.RED)
         print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
