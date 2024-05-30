@@ -60,25 +60,23 @@ for device in wifi_info:
         print()
         wifi_ssid = device.ssid
         print()
-        time.sleep(3)
-        wifi_signal = device.signal
-        wifi_cha = device.chan
-        wifi_frequency = device.freq
-        wifi_security = device.security
-        
-        print(f"WiFi Mode: {wifi_mode}")
-        print(f"BSSID: {wifi_bssid}")
-        colorama.init()
-        print(Fore.MAGENTA)
-        print(f"SSID: {wifi_ssid}")
-        print(Style.RESET_ALL)
-        print(f"Signal Strength: {wifi_signal}")
-        print(f"WiFi Chang: {wifi_cha}")
-        print(f"wifi Frequency: {wifi_frequency}")
-        print(f"wifi Security: {wifi_security}")
-        print()
-    except Exception as error:
-        print(f"Error: {error}")
+        ...
+```
+#### If you don't have nmcli, the script will run normally, just without the nmcli or network-manager function
+
+```sh
+search = os.system("nmcli")
+
+if search == False:
+   ...
+```
+
+It will look for the nmcli command, if not, just go to the next command in the script
+
+```sh
+else:
+    pass
+    ...
 ```
 
 # How Firewall Test works
@@ -94,17 +92,15 @@ If you want, you can change the sites for make the requests.
     proxy = requests.get('https://www.proxysite.com/')
     vpnproton = requests.get('https://protonvpn.com/')
     proxylist = requests.get('https://free-proxy-list.net/')
-    proxylist2 = requests.get('https://www.proxyscrape.com/free-proxy-list')
-    OnWorks = requests.get('https://www.onworks.net/')
-    nordvpn = requests.get('https://nordvpn.com/')
-    shodan = requests.get('https://www.shodan.io/')
-    zoomeye = requests.get('https://www.zoomeye.org/')
+    ...
 ```
 ## Status Code
 
 The `HTTP 200` OK is the status response code from a server for successful `HTTP` requests from a client (browser). For a web page, it indicates that its HTML code can be loaded successfully. 
 
-`HTTP 403` is an **HTTP** status code meaning access to the requested resource is forbidden. The server understood the request, but will not fulfill it, if it was correct
+The `HTTP 403` is an **HTTP** status code meaning access to the requested resource is forbidden. The server understood the request, but will not fulfill it, if it was correct
+
+The `404` error is an HTTP response code that indicates that the client was able to communicate with the server, but the server could not find what was requested, or was configured to not fulfill the request and not reveal the reason, the page no longer exists or the URL was entered incorrectly.
 
 The `503` Service Unavailable error is an `HTTP` status code that means a website's server is not available right now. Most of the time, it occurs because the server is too busy or maintenance is being performed on it. 
 
@@ -118,16 +114,12 @@ The expression `results.upload/1024/1024` is used to convert the upload speed fr
     print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
     print("Upload:", speed.upload / 1024 / 1024, "Mbps")
     print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
-    print("Ping:", speed.ping, "ms")
-    print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
-    print("Bytes:", speed.bytes_received, "bytes")
-    print("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
-    print("Server:", speed.server['sponsor'])
+    ...
 ```
 **If you want, you can change**
 
 ```sh
-print("Upload:", speed.upload / 1000, "Kbps")
+    print("Upload:", speed.upload / 1000, "Kbps")
 ```
 
 # License & Copyright
