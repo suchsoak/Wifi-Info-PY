@@ -120,15 +120,6 @@ search = os.system("nmcli")
 
 if search == False:
 
-    nmcli = os.system("nmcli")
-
-    if nmcli == True:
-        
-        print("[*] You need install network-manager system.")
-        
-    else:
-        print("")
-
     wifi_info = nt.device.wifi()
 
     for device in wifi_info:
