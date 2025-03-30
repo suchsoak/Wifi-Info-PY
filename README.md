@@ -64,7 +64,7 @@ sudo apt update && sudo apt install -y net-tools
 **it will show networks that have already been connected**
 
 >[!IMPORTANT]
-> For nmcli to work you need to have in your network-manager system
+> For nmcli to work you need to have in your `network-manager` system
 
 ```sh
 wifi_info = nt.device.wifi()
