@@ -17,7 +17,7 @@
            
                    ⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗Github: https://github.com/suchsoak⠠⠞⠑⠭⠞⠶⠠⠑⠙⠊⠞⠕⠗
                                             BY:suchsoak
-                                              v:1.0.4
+                                              v:1.0.5
 ```
 
 # How to install
@@ -35,6 +35,22 @@
 
 ```sh
   pip install -r requirements.txt
+```
+The script will install `requirements.txt` as well
+
+```sh
+requiremtes = os.system("pip install -r requirements.txt")
+    
+if requiremtes:
+        print("Install requirements.txt")
+else:
+        print("All requirements.txt installed")
+        time.sleep(2.0)
+```
+>On Linux
+
+```sh
+sudo apt update && sudo apt install -y net-tools
 ```
 
 # Usage
